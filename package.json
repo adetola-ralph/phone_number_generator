@@ -2,7 +2,7 @@
   "name": "phone_number_generator",
   "version": "0.0.1",
   "description": "Random phone number generator",
-  "main": "index.js",
+  "main": "server/index.js",
   "repository": "git@github.com:adetola-ralph/phone_number_generator.git",
   "author": "Oreofeoluwapo Olutola <oreofeoluwapo.olutola@andela.com>",
   "license": "MIT"
