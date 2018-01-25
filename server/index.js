@@ -1,8 +1,10 @@
+var path = require('path');
+var morgan = require('morgan');
+var dotenv = require('dotenv');
 var express = require('express');
 var bodyParser = require('body-parser');
-var dotenv = require('dotenv');
-var morgan = require('morgan');
-var path = require('path');
+
+var routes = require('./routes/index');
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -13,15 +15,23 @@ if (env === 'development') {
 }
 
 var app = express();
+var router = express.Router();
 
 // for logging http requests
 app.use(morgan('tiny'));
 
 app.use('/static', express.static(__dirname + '/../public'))
 
+// serve the index html page
 app.get('/', function (req, res) {
   res.sendFile(path.resolve(__dirname, '../public/index.html'));
 });
+
+// Implement routes
+routes(router);
+
+// register the root router for the api links
+app.use('/api/v1/', router);
 
 // handle unsupported requests
 app.use((req, res, next) => {
