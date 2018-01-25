@@ -20,6 +20,9 @@ body {
 }
 
 .sidebar {
+  position: fixed;
+  left: 0;
+  top: 50px;
   min-height: 100vh;
   width: 50px;
   box-shadow: #b2b2b2 0px 5px 5px;
@@ -91,4 +94,23 @@ body {
 .quick-generate {
   color: #797979;
   text-align: center;
+}
+
+table.phone-list {
+  border-collapse: collapse;
+  box-shadow: 0 3px 9px 0 rgba(0,0,0,.1);
+  background-color: #fff;
+  color: #8f8f8f;
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+table.phone-list thead tr th, table.phone-list tbody tr td {
+  padding: 15px 10px;
+  border: 0 !important;
+}
+
+table.phone-list tr:nth-child(even) {
+  background-color: #f8f8f8;
 }

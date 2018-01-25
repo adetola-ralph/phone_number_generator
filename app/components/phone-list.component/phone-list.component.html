@@ -1,0 +1,20 @@
+<table class="phone-list table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>
+        Phone Numbers
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="number in $ctrl.phoneNumbers">
+      <td>
+        {{$index + 1}}
+      </td>
+      <td>
+        {{number}}
+      </td>
+    </tr>
+  </tbody>
+</table>
