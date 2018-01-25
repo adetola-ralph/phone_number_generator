@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var dotenv = require('dotenv');
 var morgan = require('morgan');
+var path = require('path');
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -16,10 +17,10 @@ var app = express();
 // for logging http requests
 app.use(morgan('tiny'));
 
+app.use('/static', express.static(__dirname + '/../public'))
+
 app.get('/', function (req, res) {
-  res.json({
-    message: 'Welcome to the random phone number generator',
-  });
+  res.sendFile(path.resolve(__dirname, '../public/index.html'));
 });
 
 // handle unsupported requests

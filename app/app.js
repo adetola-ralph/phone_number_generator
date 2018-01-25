@@ -1,3 +1,7 @@
-var angular = reuire('angular');
+var angular = require('angular');
 
-angular.module('RandomPhoneNumberGenerator', []);
+var app = angular.module('RandomPhoneNumberGenerator', []);
+
+app.controller('TestController', function () {
+  this.name = 'Olutola';
+});

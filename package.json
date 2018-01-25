@@ -6,6 +6,9 @@
   "repository": "git@github.com:adetola-ralph/phone_number_generator.git",
   "author": "Oreofeoluwapo Olutola <oreofeoluwapo.olutola@andela.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "gulp"
+  },
   "dependencies": {
     "angular": "^1.6.8",
     "angular-ui-router": "^1.0.3",
