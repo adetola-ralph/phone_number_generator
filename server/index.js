@@ -18,7 +18,7 @@ app.use(morgan('tiny'));
 
 app.get('/', function (req, res) {
   res.json({
-    message: 'Welcome to the reandom number generator',
+    message: 'Welcome to the random phone number generator',
   });
 });
 
