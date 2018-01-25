@@ -1,0 +1,12 @@
+/node_modules/
+/app/build/
+.env
+
+/coverage/*
+/connect.lock
+
+#System Files
+.DS_Store
+
+npm-debug.log
+/.idea
