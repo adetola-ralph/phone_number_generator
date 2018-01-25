@@ -10,8 +10,8 @@
     "dev": "./node_modules/.bin/gulp"
   },
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.13",
     "angular": "^1.6.8",
-    "angular-ui-router": "^1.0.3",
     "avl": "^1.4.1",
     "body-parser": "^1.18.2",
     "dotenv": "^4.0.0",

@@ -8,9 +8,15 @@
   dependencies:
     acorn "^5.2.1"
 
-"@uirouter/core@5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.3.tgz#e2b5b1e45190e20c67ba4e15c013de5d4e0ccab3"
+"@uirouter/angularjs@^1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@uirouter/angularjs/-/angularjs-1.0.13.tgz#a63561d1177541f19b4231117d83ec49a5f19b90"
+  dependencies:
+    "@uirouter/core" "5.0.14"
+
+"@uirouter/core@5.0.14":
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/@uirouter/core/-/core-5.0.14.tgz#621477f779886c9287fcc606a4082157fc0ffa65"
 
 JSONStream@^1.0.3:
   version "1.3.2"
@@ -44,12 +50,6 @@ ajv@^4.9.1:
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
-
-angular-ui-router@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/angular-ui-router/-/angular-ui-router-1.0.3.tgz#bf2494caae95c37cf01af3761d89747cfed2db45"
-  dependencies:
-    "@uirouter/core" "5.0.3"
 
 angular@^1.6.8:
   version "1.6.8"
