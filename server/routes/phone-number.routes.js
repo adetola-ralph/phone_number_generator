@@ -1,7 +1,6 @@
+var phoneNumberController = require('./../controllers/phone-number.controller');
+
 module.exports = function (router) {
-  router.get('/phone-numbers', function (req, res) {
-    res.json({
-      message: 1,
-    });
-  });
+  router.route('/phone-numbers')
+    .post(phoneNumberController.generateNumbers);
 };

@@ -17,6 +17,10 @@ if (env === 'development') {
 var app = express();
 var router = express.Router();
 
+// uses body parser to make getting information from request object body easier
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // for logging http requests
 app.use(morgan('tiny'));
 
