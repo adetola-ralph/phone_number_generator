@@ -12,7 +12,7 @@ gulp.task('browserify', function () {
 });
 
 gulp.task('copy', ['browserify'], function () {
-  return gulp.src('./app/**/*.html')
+  return gulp.src(['./app/**/*.html', './app/**/*.css'])
     .pipe(gulp.dest('./public'));
 });
 
