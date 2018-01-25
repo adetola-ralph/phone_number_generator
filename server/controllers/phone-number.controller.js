@@ -9,5 +9,13 @@ module.exports = {
       success: true,
       data: data,
     });
-  }
+  },
+
+  getTotalNumber: function (req, res) {
+    var data = phoneModel.getTotalNumber()
+    res.json({
+      success: true,
+      data: data,
+    });
+  },
 };
