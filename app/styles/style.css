@@ -51,7 +51,39 @@ body {
   text-decoration: none;
 }
 
+.side-nav li.active {
+  color: white;
+  background-color: #8EC5FC;
+}
+
+.side-nav li.active a{
+  color: white;
+  text-decoration: none;
+}
+
 .main-content {
   background-color: #f1f1f1;
   min-height: 100vh;
+  padding: 20px;
+  padding-left: 70px;
+}
+
+.widget-panel {
+  color: #797979;
+  padding: 40px 20px 40px 30px;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 0 0px 8px 0 rgba(0,0,0,0.06),0 1px 0px 0 rgba(0,0,0,0.02);
+  background-color: #fff;
+}
+
+.widget-panel:hover {
+  cursor: pointer;
+}
+
+.widget-panel h2 {
+  font-weight: 600;
+  font-size: 28px;
+  margin: 0px !important;
 }
