@@ -1,5 +1,5 @@
-<div>
-  <div class="row">
+<div class="container">
+  <div class="">
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="widget-panel">
         <h2 class="counter">{{$ctrl.maxNumber}}</h2>
@@ -17,6 +17,19 @@
         <h2 class="counter">{{$ctrl.total}}</h2>
         <div>Total Number of Phone numbers</div>
       </div>
+    </div>
+  </div>
+  <div class="quick-generate">
+    <div class="col-xs-12">
+      <form class="form-inline">
+        <div class="form-group">
+          <label for="quickAdd">Quick Generate a phone number</label>
+        </div>
+        <button ng-click="$ctrl.quickGenerate()" class="btn btn-default">Generate</button>
+      </form>
+    </div>
+    <div class="cols-xs-12" ng-if="$ctrl.generatedNumber !== ''">
+      {{$ctrl.generatedNumber}} has been generated.
     </div>
   </div>
 </div>

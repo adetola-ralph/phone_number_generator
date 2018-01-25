@@ -87,3 +87,8 @@ body {
   font-size: 28px;
   margin: 0px !important;
 }
+
+.quick-generate {
+  color: #797979;
+  text-align: center;
+}
