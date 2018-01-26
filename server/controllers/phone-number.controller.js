@@ -4,6 +4,13 @@ var phoneModel = require('./../models/phone-number.model');
 module.exports = {
   generateNumbers: function (req, res) {
     var amount = req.body.amount || 1;
+    if (isNaN(amount)) {
+      return res.status(400).send({
+        success: false,
+        message: 'Please enter a valid number',
+      });
+    }
+
     var data = numberGenerator.generateNumbers(amount);
     // store the number(s) here
     phoneModel.addValue(data).then(function () {
