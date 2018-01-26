@@ -24,4 +24,16 @@ module.exports = {
       });
     });
   },
+
+  clear: function (fileLocation) {
+    return new Promise(function (resolve, reject) {
+      fs.writeFile(fileLocation, '[]', function (err) {
+        if (err) {
+          return reject(err);
+        }
+
+        resolve();
+      });
+    });
+  },
 };
