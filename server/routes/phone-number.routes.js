@@ -10,4 +10,6 @@ module.exports = function (router) {
   router.get('/phone-numbers/max', phoneNumberController.getMaxNumber);
 
   router.get('/phone-numbers/total', phoneNumberController.getTotalNumber);
+
+  router.get('/phone-numbers/search', phoneNumberController.findNumber);
 };

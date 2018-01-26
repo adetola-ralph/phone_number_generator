@@ -57,4 +57,14 @@ module.exports = {
       data: data,
     });
   },
+
+  findNumber: function (req, res) {
+    var searchNumber = req.query['search-number'];
+    var data = phoneModel.findNumber(searchNumber);
+    var message = searchNumber + (data ? ' was found in the store' : ' wasn\'t found');
+    res.json({
+      success: true,
+      message: message,
+    });
+  },
 };

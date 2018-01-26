@@ -46,6 +46,16 @@ var phoneNumberModel = (function () {
       getAll: function () {
         return tree.keys();
       },
+
+      findNumber: function (value) {
+        var node = tree.find(value);
+
+        if (node) {
+          return true;
+        }
+
+        return false;
+      },
     };
   }
 
