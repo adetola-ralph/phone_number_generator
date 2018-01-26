@@ -114,3 +114,7 @@ table.phone-list thead tr th, table.phone-list tbody tr td {
 table.phone-list tr:nth-child(even) {
   background-color: #f8f8f8;
 }
+
+.error-message {
+  color: #c0392b;
+}

@@ -10,15 +10,20 @@ app.config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.when('', defaultStateHandler);
 
   $urlRouterProvider.when('/', defaultStateHandler);
+  $urlRouterProvider.otherwise('/');
 
   $stateProvider.state('stats', {
     url: '/',
     template: '<stats-component></stats-component>',
   })
-  .state('phonelist', {
+  .state('phone-list', {
     url: '/phone-list',
     template: '<phone-list-component></phone-list-component>',
-  });
+  })
+  .state('generate-numbers', {
+    url: '/generate-numbers',
+    template: '<generate-numbers-component></generate-numbers-component>',
+  })
 });
 
 require('./components/index');
