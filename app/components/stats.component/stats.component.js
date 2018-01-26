@@ -7,6 +7,8 @@ angular.module('RandomPhoneNumberGenerator')
       _this.minNumber = '';
       _this.total = '';
       _this.generatedNumber = '';
+      _this.searchNumber;
+      _this.searchResultMessage = '';
       
       _this.getStats = function () {
         $q.all({
@@ -29,6 +31,13 @@ angular.module('RandomPhoneNumberGenerator')
           .then(function (result) {
             _this.generatedNumber = result.data.data[0];
             _this.getStats();
+          });
+      };
+      _this.search = function () {
+        _this.searchResultMessage = '';
+        $http.get('/api/v1/phone-numbers/search?search-number=' + _this.searchNumber)
+          .then(function (result) {
+            _this.searchResultMessage = result.data.message;
           });
       };
     },

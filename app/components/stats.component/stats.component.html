@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="">
+  <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="widget-panel">
         <h2 class="counter">{{$ctrl.maxNumber}}</h2>
@@ -19,7 +19,7 @@
       </div>
     </div>
   </div>
-  <div class="quick-generate">
+  <div class="quick-generate row">
     <div class="col-xs-12">
       <form class="form-inline">
         <div class="form-group">
@@ -30,6 +30,20 @@
     </div>
     <div class="cols-xs-12" ng-if="$ctrl.generatedNumber !== ''">
       {{$ctrl.generatedNumber}} has been generated.
+    </div>
+  </div>
+  <div class="row quick-generate">
+    <div class="col-xs-12">
+      <form class="form-inline">
+          <div class="form-group">
+            <label for="searchNumber">
+              Enter a number to search
+            </label>
+            <input type="text" name="searchNumber" class="form-control" id="amount" ng-model="$ctrl.searchNumber" placeholder="Enter a number to search">
+          </div>
+          <button type="submit" class="btn btn-default" ng-click="$ctrl.search()">Search</button>
+        </form>
+        <p ng-if="$ctrl.searchResultMessage !== ''">{{$ctrl.searchResultMessage}}</p>
     </div>
   </div>
 </div>
