@@ -39,7 +39,7 @@ var phoneNumberModel = (function () {
         valuearray.forEach(function (value) {
           tree.insert(value);
         });
-        console.log(tree.keys())
+
         return source.write('numbers.json', tree.keys());
       },
 

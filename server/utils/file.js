@@ -3,12 +3,16 @@ var fs = require('fs');
 module.exports = {
   read: function (fileLocation) {
     return new Promise(function (resolve, reject) {
-      fs.readFile(fileLocation, function (err, data) {
+      fs.readFile(fileLocation, { flag: 'a+' },function (err, data) {
         if (err) {
           return reject(err);
         }
 
-        return resolve(JSON.parse(data));
+        try {
+          resolve(JSON.parse(data));
+        } catch (err) {
+          resolve([]);
+        }
       });
     });
   },
